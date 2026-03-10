@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef" \
+"../../../../digital_lock_project.srcs/sources_1/imports/Downloads/button_debouncer.v" \
+"../../../../digital_lock_project.srcs/sources_1/imports/Downloads/clock_divider.v" \
+"../../../../digital_lock_project.srcs/sources_1/imports/Downloads/digit_selector.v" \
+"../../../../digital_lock_project.srcs/sources_1/imports/Downloads/fsm_controller.v" \
+"../../../../digital_lock_project.srcs/sources_1/imports/Downloads/seven_segment_driver.v" \
+"../../../../digital_lock_project.srcs/sources_1/imports/Downloads/top.v" \
+"../../../../digital_lock_project.srcs/sim_1/imports/Downloads/tb_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

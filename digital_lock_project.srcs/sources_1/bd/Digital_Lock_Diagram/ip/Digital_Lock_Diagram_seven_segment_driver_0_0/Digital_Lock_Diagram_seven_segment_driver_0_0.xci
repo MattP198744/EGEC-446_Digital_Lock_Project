@@ -1,0 +1,53 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "Digital_Lock_Diagram_seven_segment_driver_0_0",
+    "cell_name": "seven_segment_driver_0",
+    "component_reference": "xilinx.com:module_ref:seven_segment_driver:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../digital_lock_project.gen/sources_1/bd/Digital_Lock_Diagram/ip/Digital_Lock_Diagram_seven_segment_driver_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "Digital_Lock_Diagram_seven_segment_driver_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "artix7" } ],
+        "BASE_BOARD_PART": [ { "value": "digilentinc.com:nexys4:part0:1.1" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7a100t" } ],
+        "PACKAGE": [ { "value": "csg324" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "VERILOG" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../digital_lock_project.gen/sources_1/bd/Digital_Lock_Diagram/ip/Digital_Lock_Diagram_seven_segment_driver_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2025.1" } ],
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "clk_scan": [ { "direction": "in" } ],
+        "enable_digits": [ { "direction": "in" } ],
+        "cursor_pos": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
+        "show_correct": [ { "direction": "in" } ],
+        "show_wrong": [ { "direction": "in" } ],
+        "d1": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
+        "d2": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
+        "d3": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
+        "d4": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
+        "seg": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
+        "an": [ { "direction": "out", "size_left": "7", "size_right": "0" } ]
+      }
+    }
+  }
+}

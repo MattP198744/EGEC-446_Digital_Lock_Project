@@ -1,0 +1,2 @@
+Digital_Lock_Diagram.v,verilog,xil_defaultlib,../../../bd/Digital_Lock_Diagram/sim/Digital_Lock_Diagram.v,incdir="../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

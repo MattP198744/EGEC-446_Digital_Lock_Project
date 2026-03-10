@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"Digital_Lock_Diagram": {
+			"proto_instances": {
+			}
+		}
+	}
+}

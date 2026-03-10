@@ -1,0 +1,524 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xF5DD7E21173D5CCF",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../digital_lock_project.gen/sources_1/bd/Digital_Lock_Diagram",
+      "name": "Digital_Lock_Diagram",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2025.1"
+    },
+    "design_tree": {
+      "button_debouncer_0": "",
+      "seven_segment_driver_0": "",
+      "clock_divider_0": "",
+      "fsm_controller_0": "",
+      "password_store_0": "",
+      "digit_selector_0": ""
+    },
+    "ports": {
+      "clk_0": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "reset_0": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "noisy_in_0": {
+        "direction": "I"
+      },
+      "lock_mode_0": {
+        "direction": "I"
+      },
+      "check_mode_0": {
+        "direction": "I"
+      },
+      "clear_sw_0": {
+        "direction": "I"
+      },
+      "correct_led_0": {
+        "direction": "O"
+      },
+      "wrong_led_0": {
+        "direction": "O"
+      },
+      "seg_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "an_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "enable_digits_0": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "button_debouncer_0": {
+        "vlnv": "xilinx.com:module_ref:button_debouncer:1.0",
+        "ip_revision": "1",
+        "xci_name": "Digital_Lock_Diagram_button_debouncer_0_0",
+        "xci_path": "ip\\Digital_Lock_Diagram_button_debouncer_0_0\\Digital_Lock_Diagram_button_debouncer_0_0.xci",
+        "inst_hier_path": "button_debouncer_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "button_debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "noisy_in": {
+            "direction": "I"
+          },
+          "clean_pulse": {
+            "direction": "O"
+          }
+        }
+      },
+      "seven_segment_driver_0": {
+        "vlnv": "xilinx.com:module_ref:seven_segment_driver:1.0",
+        "ip_revision": "1",
+        "xci_name": "Digital_Lock_Diagram_seven_segment_driver_0_0",
+        "xci_path": "ip\\Digital_Lock_Diagram_seven_segment_driver_0_0\\Digital_Lock_Diagram_seven_segment_driver_0_0.xci",
+        "inst_hier_path": "seven_segment_driver_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "seven_segment_driver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_scan": {
+            "direction": "I"
+          },
+          "enable_digits": {
+            "direction": "I"
+          },
+          "cursor_pos": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "show_correct": {
+            "direction": "I"
+          },
+          "show_wrong": {
+            "direction": "I"
+          },
+          "d1": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "d2": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "d3": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "d4": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "seg": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "an": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "clock_divider_0": {
+        "vlnv": "xilinx.com:module_ref:clock_divider:1.0",
+        "ip_revision": "1",
+        "xci_name": "Digital_Lock_Diagram_clock_divider_0_0",
+        "xci_path": "ip\\Digital_Lock_Diagram_clock_divider_0_0\\Digital_Lock_Diagram_clock_divider_0_0.xci",
+        "inst_hier_path": "clock_divider_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clock_divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_scan": {
+            "direction": "O"
+          },
+          "clk_flash": {
+            "direction": "O"
+          }
+        }
+      },
+      "fsm_controller_0": {
+        "vlnv": "xilinx.com:module_ref:fsm_controller:1.0",
+        "ip_revision": "1",
+        "xci_name": "Digital_Lock_Diagram_fsm_controller_0_0",
+        "xci_path": "ip\\Digital_Lock_Diagram_fsm_controller_0_0\\Digital_Lock_Diagram_fsm_controller_0_0.xci",
+        "inst_hier_path": "fsm_controller_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "fsm_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "check_mode": {
+            "direction": "I"
+          },
+          "clear_sw": {
+            "direction": "I"
+          },
+          "ok_pulse": {
+            "direction": "I"
+          },
+          "match": {
+            "direction": "I"
+          },
+          "clk_flash": {
+            "direction": "I"
+          },
+          "correct_led": {
+            "direction": "O"
+          },
+          "wrong_led": {
+            "direction": "O"
+          },
+          "blinking": {
+            "direction": "O"
+          },
+          "clear_digits": {
+            "direction": "O"
+          }
+        }
+      },
+      "password_store_0": {
+        "vlnv": "xilinx.com:module_ref:password_store:1.0",
+        "ip_revision": "1",
+        "xci_name": "Digital_Lock_Diagram_password_store_0_0",
+        "xci_path": "ip\\Digital_Lock_Diagram_password_store_0_0\\Digital_Lock_Diagram_password_store_0_0.xci",
+        "inst_hier_path": "password_store_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "password_store",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "pw1": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "pw2": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "pw3": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "pw4": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "digit_selector_0": {
+        "vlnv": "xilinx.com:module_ref:digit_selector:1.0",
+        "ip_revision": "1",
+        "xci_name": "Digital_Lock_Diagram_digit_selector_0_0",
+        "xci_path": "ip\\Digital_Lock_Diagram_digit_selector_0_0\\Digital_Lock_Diagram_digit_selector_0_0.xci",
+        "inst_hier_path": "digit_selector_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "digit_selector",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clear": {
+            "direction": "I"
+          },
+          "lock_mode": {
+            "direction": "I"
+          },
+          "blinking": {
+            "direction": "I"
+          },
+          "up_pulse": {
+            "direction": "I"
+          },
+          "down_pulse": {
+            "direction": "I"
+          },
+          "left_pulse": {
+            "direction": "I"
+          },
+          "right_pulse": {
+            "direction": "I"
+          },
+          "cursor_pos": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "d1": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "d2": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "d3": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "d4": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "button_debouncer_0_clean_pulse": {
+        "ports": [
+          "button_debouncer_0/clean_pulse",
+          "digit_selector_0/up_pulse",
+          "digit_selector_0/down_pulse",
+          "digit_selector_0/left_pulse",
+          "digit_selector_0/right_pulse",
+          "fsm_controller_0/ok_pulse"
+        ]
+      },
+      "check_mode_0_1": {
+        "ports": [
+          "check_mode_0",
+          "fsm_controller_0/check_mode"
+        ]
+      },
+      "clear_sw_0_1": {
+        "ports": [
+          "clear_sw_0",
+          "fsm_controller_0/clear_sw"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "password_store_0/clk",
+          "digit_selector_0/clk",
+          "clock_divider_0/clk",
+          "button_debouncer_0/clk",
+          "fsm_controller_0/clk"
+        ]
+      },
+      "clock_divider_0_clk_flash": {
+        "ports": [
+          "clock_divider_0/clk_flash",
+          "fsm_controller_0/clk_flash"
+        ]
+      },
+      "clock_divider_0_clk_scan": {
+        "ports": [
+          "clock_divider_0/clk_scan",
+          "seven_segment_driver_0/clk_scan"
+        ]
+      },
+      "digit_selector_0_cursor_pos": {
+        "ports": [
+          "digit_selector_0/cursor_pos",
+          "seven_segment_driver_0/cursor_pos"
+        ]
+      },
+      "digit_selector_0_d1": {
+        "ports": [
+          "digit_selector_0/d1",
+          "seven_segment_driver_0/d1"
+        ]
+      },
+      "digit_selector_0_d2": {
+        "ports": [
+          "digit_selector_0/d2",
+          "seven_segment_driver_0/d2"
+        ]
+      },
+      "digit_selector_0_d3": {
+        "ports": [
+          "digit_selector_0/d3",
+          "seven_segment_driver_0/d3"
+        ]
+      },
+      "digit_selector_0_d4": {
+        "ports": [
+          "digit_selector_0/d4",
+          "seven_segment_driver_0/d4"
+        ]
+      },
+      "enable_digits_0_1": {
+        "ports": [
+          "enable_digits_0",
+          "seven_segment_driver_0/enable_digits"
+        ]
+      },
+      "fsm_controller_0_blinking": {
+        "ports": [
+          "fsm_controller_0/blinking",
+          "digit_selector_0/blinking"
+        ]
+      },
+      "fsm_controller_0_clear_digits": {
+        "ports": [
+          "fsm_controller_0/clear_digits",
+          "digit_selector_0/clear"
+        ]
+      },
+      "fsm_controller_0_correct_led": {
+        "ports": [
+          "fsm_controller_0/correct_led",
+          "correct_led_0",
+          "seven_segment_driver_0/show_correct"
+        ]
+      },
+      "fsm_controller_0_wrong_led": {
+        "ports": [
+          "fsm_controller_0/wrong_led",
+          "wrong_led_0",
+          "seven_segment_driver_0/show_wrong"
+        ]
+      },
+      "lock_mode_0_1": {
+        "ports": [
+          "lock_mode_0",
+          "digit_selector_0/lock_mode"
+        ]
+      },
+      "noisy_in_0_1": {
+        "ports": [
+          "noisy_in_0",
+          "button_debouncer_0/noisy_in"
+        ]
+      },
+      "password_store_0_pw1": {
+        "ports": [
+          "password_store_0/pw1",
+          "fsm_controller_0/match"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "reset_0",
+          "digit_selector_0/reset",
+          "clock_divider_0/reset",
+          "button_debouncer_0/reset",
+          "password_store_0/reset",
+          "fsm_controller_0/reset"
+        ]
+      },
+      "seven_segment_driver_0_an": {
+        "ports": [
+          "seven_segment_driver_0/an",
+          "an_0"
+        ]
+      },
+      "seven_segment_driver_0_seg": {
+        "ports": [
+          "seven_segment_driver_0/seg",
+          "seg_0"
+        ]
+      }
+    }
+  }
+}
